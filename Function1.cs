@@ -87,7 +87,7 @@ public class GenData
                 {
                     GlobalState.Status = "running";
                     _cancellationTokenSource = new CancellationTokenSource();
-                    Console.WriteLine("parameter passed = " + action);
+                    //Console.WriteLine("parameter passed = " + action);
                     double balance = 10000;  // Initial balance of $10,000.00
                     Random random = new Random();
                     DateTime dt = DateTime.Now;
@@ -108,8 +108,8 @@ public class GenData
                     }
 
                     GlobalState.EndTime = DateTime.Now.AddMinutes(deltaTime);
-                    Console.WriteLine("Start time = " + DateTime.Now);
-                    Console.WriteLine("Function will run until " + GlobalState.EndTime.ToString());
+                    //Console.WriteLine("Start time = " + DateTime.Now);
+                    //Console.WriteLine("Function will run until " + GlobalState.EndTime.ToString());
                     result = "Data Generation started will run for " + deltaTime + " minutes";
 
                     await Task.Run(async () =>
